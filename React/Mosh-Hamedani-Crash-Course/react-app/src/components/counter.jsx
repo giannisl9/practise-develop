@@ -38,10 +38,9 @@ class Counter extends Component {
           Increment
         </button>
 
-        <ul>
-          {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
+        <ul className='list-inline'>
+          {this.state.tags.map(tag => <li className='list-inline-item' key={tag}>{tag}</li>)}
         </ul>
-
       </React.Fragment>
     )
   }
