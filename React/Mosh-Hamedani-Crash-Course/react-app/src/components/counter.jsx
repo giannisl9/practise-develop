@@ -2,23 +2,23 @@ import React, { Component } from 'react'
 
 class Counter extends Component {
   state = {
-    count: this.props.value,
+    value: this.props.value,
     tags: ['tag1', 'tag2', 'tag3', 'tag4']
   }
 
   handleClick () {
-    this.setState({count: this.state.count + 1})
+    this.setState({value: this.state.value + 1})
   }
 
   formatCount () {
-    const { count } = this.state
-    return count === 0 ? 'Zero' : count
+    const { value } = this.state
+    return value === 0 ? 'Zero' : value
   }
 
   getBadgeClasses () {
     let classes = 'badge m-2 badge-'
-    const { count } = this.state
-    classes += count === 0 ? 'warning' : 'primary'
+    const { value } = this.state
+    classes += value === 0 ? 'warning' : 'primary'
     return classes
   }
 
