@@ -10,3 +10,4 @@ Section 1 *(1h 20m)*
 - [x] Conditional Rendering
 - [x] Handling Events
 - [x] Updating the State
+- [x] Passing Data to Components
