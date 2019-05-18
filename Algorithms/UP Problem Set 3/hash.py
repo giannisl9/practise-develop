@@ -4,7 +4,7 @@ from generator import generate_input
 n = 1000000
 collisions = 0
 size = next_prime(1000)
-p = next_prime(60)
+p = next_prime(62)
 table = size * [None]
 load_factor = 0.0
 occupied = 0
@@ -28,8 +28,9 @@ def hash(card, m):
     return value % m
 
 def table_doubling():
-    global table, size, collisions
+    global table, size, collisions, occupied
     collisions = 0
+    occupied = 0
     tmp = table
     size = next_prime(size*2)
     table = size * [None]
@@ -95,7 +96,7 @@ for i, visits in enumerate(daysVisit):
         mostVisitedDay['visits'] = visits
 
 print("The hash table H is of size {}, has {} places occupied and its load factor is {:.2f}.".format(size, occupied, load_factor))
-print("Card {} (hash value: {}) visited {} times and has spent the most ({}). It can be found at H[{}]".format(
+print("Card {} (hash value: {}) visited {} times and has spent the most ({}). It can be found at H[{}].".format(
     mostPaid['card'], hash(mostPaid['card'], size), len(table[search(mostPaid['card'])]['visits']), mostPaid['amount'], search(mostPaid['card'])
     ))
 print("Card {} (hash value: {}) has the most visits ({}) and it can be found at H[{}].".format(mostVisits['card'], hash(mostVisits['card'], size), mostVisits['number'], search(mostVisits['card'])))
