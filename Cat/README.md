@@ -1,1 +1,1 @@
-Cat is a Python extension module designed for learning purposes.
+Cat is a C extension module for Python. It is developed for learning purposes.
